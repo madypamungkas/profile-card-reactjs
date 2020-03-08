@@ -17,14 +17,19 @@ const Card = (props) => {
 const App = () =>{
   return(
 <div>
-    <Card name = "Name "
-          lastName="Last"
-          desc="Deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi "
+    <Card name = "Layndo Safara"
+          lastName="Aqsa"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio justo, sollicitudin eget gravida nec, cursus a enim. Nulla ut erat metus. Sed fringilla imperdiet "
           img="https://solve.technow.id/storage/user/14" 
           color="card blue" 
-          jobs="Job 1"  />
-   
-  
+          jobs="Web Developer"  />
+    <Card name = "Muhamad "
+          lastName="Ady Pamungkas"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio justo, sollicitudin eget gravida nec, cursus a enim. Nulla ut erat metus. Sed fringilla imperdiet "
+          img="https://solve.technow.id/storage/user/5" 
+          color="card yellow" 
+          jobs="Mobile Developer"  />
+        
    </div>
   );
 }
