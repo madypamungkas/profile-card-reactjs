@@ -8,7 +8,7 @@ const Card = (props) => {
     <figcaption>
       <h2>{props.name} <span>{props.lastName}</span></h2>
   <p>{props.desc}</p>
-      <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
+      <div class="icons"><a href={props.home}><i class="ion-ios-home"></i></a><a href={props.email}><i class="ion-ios-email"></i></a><a href={props.wa}><i class="ion-ios-telephone"></i></a></div>
     </figcaption><img src={props.img} alt="sample9" />
     <div class="position">{props.jobs}</div>
   </div>
@@ -22,13 +22,19 @@ const App = () =>{
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio justo, sollicitudin eget gravida nec, cursus a enim. Nulla ut erat metus. Sed fringilla imperdiet "
           img="https://solve.technow.id/storage/user/14" 
           color="card blue" 
-          jobs="Web Developer"  />
+          jobs="Web Developer"
+          home="https://www.instagram.com/layndo.sfr"
+          email="https://www.gmail.com"
+          wa="https://wa.me/6282324835677"   />
     <Card name = "Muhamad "
           lastName="Ady Pamungkas"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio justo, sollicitudin eget gravida nec, cursus a enim. Nulla ut erat metus. Sed fringilla imperdiet "
           img="https://solve.technow.id/storage/user/5" 
           color="card yellow" 
-          jobs="Mobile Developer"  />
+          jobs="Mobile Developer"
+          home="https://www.instagram.com/adypamunqkas"
+          email="https://www.gmail.com"
+          wa="https://wa.me/6281330646518"  />
         
    </div>
   );
