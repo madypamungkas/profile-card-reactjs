@@ -1,43 +1,72 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Row , Col } from 'antd';
+import User from './card/User';
+import NavBar from './menu/Menu';
+import Slideshow from './menu/Slideshow';
 
-const Card = (props) => {
-  return (
-    <div class={props.color}>
-    <figcaption>
-      <h2>{props.name} <span>{props.lastName}</span></h2>
-  <p>{props.desc}</p>
-      <div class="icons"><a href={props.home}><i class="ion-ios-home"></i></a><a href={props.email}><i class="ion-ios-email"></i></a><a href={props.wa}><i class="ion-ios-telephone"></i></a></div>
-    </figcaption><img src={props.img} alt="sample9" />
-    <div class="position">{props.jobs}</div>
-  </div>
-   );
-}
-const App = () =>{
-  return(
-<div>
-    <Card name = "Layndo Safara"
-          lastName="Aqsa"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio justo, sollicitudin eget gravida nec, cursus a enim. Nulla ut erat metus. Sed fringilla imperdiet "
-          img="https://solve.technow.id/storage/user/14" 
-          color="card blue" 
-          jobs="Web Developer"
-          home="https://www.instagram.com/layndo.sfr"
-          email="https://www.gmail.com"
-          wa="https://wa.me/6282324835677"   />
-    <Card name = "Muhamad "
-          lastName="Ady Pamungkas"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio justo, sollicitudin eget gravida nec, cursus a enim. Nulla ut erat metus. Sed fringilla imperdiet "
-          img="https://solve.technow.id/storage/user/5" 
-          color="card yellow" 
-          jobs="Mobile Developer"
-          home="https://www.instagram.com/adypamunqkas"
-          email="https://www.gmail.com"
-          wa="https://wa.me/6281330646518"  />
-        
-   </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: [
+        {
+          name: 'Dwi Noviandaru',
+          username: 'DwiNoviandaru',
+          id: '1195143715318161408',
+          pic: 'https://pbs.twimg.com/profile_images/1195144314201886720/sba4hMRf_400x400.jpg',
+        },
+        {
+          name: 'Layndo Sfr.',
+          username: 'layndoaqsa',
+          id: '393109460',
+          pic: 'https://pbs.twimg.com/profile_images/1210810066791616512/e_eUuBEe_400x400.jpg'
+        },        
+        {
+          name: 'Afyad Kafa',
+          username: 'Kafyad',
+          id: '99896863',
+          pic: 'https://pbs.twimg.com/profile_images/1180900634662297600/eZn5wv_r_400x400.jpg'
+        },
+        {
+          name: 'Ady',
+          username: 'adypamunqkas',
+          id: '2268790320',
+          pic: 'https://pbs.twimg.com/profile_images/1228534261197598726/xcNI0ZPl_400x400.jpg'
+        },
+      ],
+      searchText: '',
+      current: 'twitter',
+    }
+  }
+
+  searchText = res => {
+    this.setState({searchText: res});
+  }
+
+  render() {
+    return (
+      <div>
+        <NavBar selectedKeys={this.state.current} onSearch={this.searchText}></NavBar>
+        <Slideshow></Slideshow>
+        <div className="card">
+          <Row gutter={[16,16]} style={{display:'flex',alignItems:'center',justifyContent:'space-around'}}>
+          {
+            this.state.users
+            .filter(user => (
+              user.name.toLowerCase().includes(this.state.searchText.toLowerCase())                     
+            ))
+            .map((user, index) => (
+              <Col key={index} className="gutter-row" span={5}>
+                <User name={user.name} username={user.username} pic={user.pic} id={user.id} />
+              </Col>
+            ))
+          }          
+          </Row>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
