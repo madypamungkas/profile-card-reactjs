@@ -11,30 +11,32 @@ class App extends React.Component {
     this.state = {
       users: [
         {
-          name: 'Dwi Noviandaru',
-          username: 'DwiNoviandaru',
+          name: 'Murid Chef Arnold',
+          username: 'TretanMuslim',
           id: '1195143715318161408',
-          pic: 'https://pbs.twimg.com/profile_images/1195144314201886720/sba4hMRf_400x400.jpg',
+          pic: 'https://pbs.twimg.com/profile_images/1114066274798059520/no7FCbC0_400x400.jpg',
         },
         {
-          name: 'Layndo Sfr.',
-          username: 'layndoaqsa',
+          name: 'Raisa Andriana',
+          username: 'raisa6690',
           id: '393109460',
-          pic: 'https://pbs.twimg.com/profile_images/1210810066791616512/e_eUuBEe_400x400.jpg'
-        },        
+          pic: 'https://pbs.twimg.com/profile_images/1228152592556941312/7d6O8d9k_400x400.jpg'
+        },    
         {
-          name: 'Afyad Kafa',
-          username: 'Kafyad',
-          id: '99896863',
-          pic: 'https://pbs.twimg.com/profile_images/1180900634662297600/eZn5wv_r_400x400.jpg'
-        },
-        
-        {
-          name: 'Ady',
+          name: 'ini saya',
           username: 'adypamunqkas',
           id: '2268790320',
           pic: 'https://pbs.twimg.com/profile_images/1228534261197598726/xcNI0ZPl_400x400.jpg'
+        },   
+        {
+          name: '#ASNKiniBeda',
+          username: 'BKNgoid',
+          id: '99896863',
+          pic: 'https://pbs.twimg.com/profile_images/1075639465823981569/gMy2GW5f_400x400.jpg'
         },
+        
+      
+       
       ],
       searchText: '',
       current: 'twitter',

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Input, Menu} from 'antd';
 import {
-    TwitterOutlined,
-    SettingOutlined,
+    TwitterOutlined
   } from '@ant-design/icons';
 const { Search } = Input;
 
