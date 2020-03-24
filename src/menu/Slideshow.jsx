@@ -4,17 +4,30 @@ import { Carousel } from 'antd';
 class Slideshow extends React.Component {
     render(){
         return(
-            <div className="slideshow">
+            <div className="slideshow" >
+               
                 <Carousel autoplay dotPosition={"right"} style={{padding:5}}>
                     <div>
-                        <h2>“Be yourself; everyone else is already taken.” ― Oscar Wilde</h2>
+                        <h2>Trending On Twitter - Social Distancing</h2>
                     </div>
                     <div>
-                        <h2>“Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.” ― Bernard M. Baruch</h2>
+                        <h2>Trending On Twitter - Liverpool Gagal Juara</h2>
                     </div>
                     <div>
-                        <h2>“You know you're in love when you can't fall asleep because reality is finally better than your dreams.” ― Dr. Seuss</h2>
+                        <h2>Trending On Twitter - Corona Cuma Sampe April</h2>
                     </div>
+                    <div>
+                        <h2>Trending On Twitter - Respek Tenaga Kesehatan</h2>
+                    </div>
+                    <div>
+                        <h2>Trending On Twitter - #ILCSimalakamaCorona</h2>
+                    </div>
+                    <div>
+                        <h2>Trending On Twitter - #KitaDiRumahAjaYa</h2>
+                    </div><div>
+                        <h2>Trending On Twitter - #Covidiots</h2>
+                    </div>
+                    
                 </Carousel>
             </div>
         )

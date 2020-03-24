@@ -28,6 +28,7 @@ class App extends React.Component {
           id: '99896863',
           pic: 'https://pbs.twimg.com/profile_images/1180900634662297600/eZn5wv_r_400x400.jpg'
         },
+        
         {
           name: 'Ady',
           username: 'adypamunqkas',

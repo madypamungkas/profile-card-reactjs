@@ -8,10 +8,10 @@
 body {
   font-size: 92%;
   font-family: 'Quicksand', sans-serif;
-  color: white;
-  background: #fff;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #fff, #fff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #fff, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #808080;
+  background: #808080;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #808080, #808080);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #808080, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 p {
@@ -20,11 +20,12 @@ p {
 
 h2, h3, h4, h5 {
   margin: 0 0 3px;
+  color: #fff;
 }
 
 .UserCard {
   display: inline-block;
-  width: 200px;
+  width: 160px;
   height: 250px;
   border-radius: 10px;
   box-shadow: 5px 5px 30px black;
@@ -35,7 +36,7 @@ h2, h3, h4, h5 {
 }
 
 .UserCard img {
-  width: 120px;
+  width: 130px;
   height: 120px;
   margin: 8px 0 0 0;
   border-radius: 50%;

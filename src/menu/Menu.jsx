@@ -12,30 +12,13 @@ class NavBar extends React.Component {
     render () {
         const { selectedKeys} = this.props;
         return(
-        <div className="menu">
-          <Menu onClick={this.handleClick} selectedKeys={selectedKeys} mode="horizontal">
-            <Menu.Item key="twitter">
+        <div className="menu" style={{backgroundColor:"gray"}}>
+          <Menu onClick={this.handleClick} selectedKeys={selectedKeys} mode="horizontal" style={{backgroundColor:"gray"}}>
+            <Menu.Item key="twitter" style={{borderBottom:'transparent', color:"white"}}>
               <TwitterOutlined />
-              Profile Twitter
+              Twitter Account
             </Menu.Item>
-            <SubMenu
-              title={
-                <span className="submenu-title-wrapper">
-                  <SettingOutlined />
-                  Setting
-                </span>
-              }
-            >
-              <Menu.ItemGroup title="Item 1">
-                <Menu.Item key="setting:1">Option 1</Menu.Item>
-                <Menu.Item key="setting:2">Option 2</Menu.Item>
-              </Menu.ItemGroup>
-              <Menu.ItemGroup title="Item 2">
-                <Menu.Item key="setting:3">Option 3</Menu.Item>
-                <Menu.Item key="setting:4">Option 4</Menu.Item>
-              </Menu.ItemGroup>
-            </SubMenu>
-            <Menu.Item key="search" style={{borderBottom:'transparent', float:"right"}}>
+            <Menu.Item key="search" style={{borderBottom:'transparent'}}>
               <Search key="search-box" className="search-box"
               placeholder="Find Profile..."
               onSearch={this.props.onSearch}
