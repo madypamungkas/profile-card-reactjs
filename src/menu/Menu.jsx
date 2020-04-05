@@ -1,23 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Input, Menu} from 'antd';
 import {
-    TwitterOutlined
+    TwitterOutlined,
+    SettingOutlined,
   } from '@ant-design/icons';
 const { Search } = Input;
 
-const { SubMenu } = Menu;
 
 class NavBar extends React.Component {
     render () {
         const { selectedKeys} = this.props;
         return(
-        <div className="menu" style={{backgroundColor:"gray"}}>
-          <Menu onClick={this.handleClick} selectedKeys={selectedKeys} mode="horizontal" style={{backgroundColor:"gray"}}>
-            <Menu.Item key="twitter" style={{borderBottom:'transparent', color:"white"}}>
+        <div className="menu">
+          <Menu onClick={this.handleClick} selectedKeys={selectedKeys} mode="horizontal">
+            <Menu.Item key="twitter">
               <TwitterOutlined />
-              Twitter Account
+              <Link to="/">Home Twitter</Link> 
             </Menu.Item>
-            <Menu.Item key="search" style={{borderBottom:'transparent'}}>
+            <Menu.Item key="profile">
+              <SettingOutlined />
+              <Link to="/profile">Profile</Link> 
+            </Menu.Item>
+            <Menu.Item key="search" style={{borderBottom:'transparent', float:"right"}}>
               <Search key="search-box" className="search-box"
               placeholder="Find Profile..."
               onSearch={this.props.onSearch}
