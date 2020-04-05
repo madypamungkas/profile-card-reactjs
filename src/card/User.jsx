@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, message} from 'antd';
+import { Card, Button} from 'antd';
 import {
     LikeOutlined,
     DislikeOutlined,
